@@ -35,6 +35,7 @@ public class Map {
         this.mapY = mapY;
         this.map = new char[mapY][mapX];
 
+        
         for(int i = 0; i < this.mapY; i++){
             for(int k = 0; k < this.mapX; k++){
                 if (i == 0 || i == this.mapY - 1) {
@@ -48,9 +49,11 @@ public class Map {
                 this.map[i][k] = '0';
             }
         }
+        
 
         this.map[0][(this.mapX)/2] = 'U';
     }
+
 
     public void setPlayerOnMap(){
         this.map[mapY - 2][mapX/2] = 'A';

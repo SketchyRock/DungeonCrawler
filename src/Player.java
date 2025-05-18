@@ -2,10 +2,21 @@ import java.util.ArrayList;
 
 public class Player {
 
+    private int playerX;
+    private int playerY;
+
     private int playerHealth;
     private int playerMana;
     private int playerStamina;
     private ArrayList<String> playerInventory;
+
+    public int getPlayerX() {
+        return playerX;
+    }
+
+    public int getPlayerY() {
+        return playerY;
+    }
 
     public int getPlayerHealth() {
         return playerHealth;
@@ -23,6 +34,14 @@ public class Player {
         return playerInventory;
     }
 
+    public void setPlayerX(int playerX) {
+        this.playerX = playerX;
+    }
+
+    public void setPlayerY(int playerY) {
+        this.playerY = playerY;
+    }
+
     public void setPlayerHealth(int playerHealth) {
         this.playerHealth = playerHealth;
     }
@@ -38,6 +57,7 @@ public class Player {
     public void setPlayerInventory(ArrayList<String> playerInventory) {
         this.playerInventory = playerInventory;
     }
+    
 
     public Player(){
         this.playerHealth = 100;
@@ -56,12 +76,13 @@ public class Player {
 
     }
 
+    public void setPlayerCords(int playerX, int playerY){
+        
+
+    }
     
 
     
 
     
-
-    
-
 }
