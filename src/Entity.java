@@ -4,7 +4,12 @@ public class Entity {
 
     protected String name;
     protected int HP,MP,SP,Str,Def,intel,Ag,gold;
+    protected int entityX, entityY;
     protected String[] equippedWeapons,equippedArmor,equipment;
+
+    // temporarily putting movement stuff here but it will be appeneded to the end
+    // of the class later. need it here for ease of access
+
 
     public Entity(String name){
         this.name = name;
@@ -16,6 +21,8 @@ public class Entity {
         this.intel = 0;
         this.Ag = 0;
         this.gold = 0;
+        this.entityX = 0;
+        this.entityY = 0;
         equippedWeapons = new String[2];
         equippedArmor = new String[5];
         equipment = new String[20];
