@@ -1,88 +1,53 @@
-import java.util.ArrayList;
+public class Player extends Entity{
 
-public class Player {
+    protected int Lvl,XP;
+    protected CharacterClass characterClass;
 
-    private int playerX;
-    private int playerY;
-
-    private int playerHealth;
-    private int playerMana;
-    private int playerStamina;
-    private ArrayList<String> playerInventory;
-
-    public int getPlayerX() {
-        return playerX;
-    }
-
-    public int getPlayerY() {
-        return playerY;
-    }
-
-    public int getPlayerHealth() {
-        return playerHealth;
-    }
-
-    public int getPlayerMana() {
-        return playerMana;
-    }
-
-    public int getPlayerStamina() {
-        return playerStamina;
-    }
-
-    public ArrayList<String> getPlayerInventory() {
-        return playerInventory;
-    }
-
-    public void setPlayerX(int playerX) {
-        this.playerX = playerX;
-    }
-
-    public void setPlayerY(int playerY) {
-        this.playerY = playerY;
-    }
-
-    public void setPlayerHealth(int playerHealth) {
-        this.playerHealth = playerHealth;
-    }
-
-    public void setPlayerMana(int playerMana) {
-        this.playerMana = playerMana;
-    }
-
-    public void setPlayerStamina(int playerStamina) {
-        this.playerStamina = playerStamina;
-    }
-
-    public void setPlayerInventory(ArrayList<String> playerInventory) {
-        this.playerInventory = playerInventory;
-    }
-    
-
-    public Player(){
-        this.playerHealth = 100;
-        this.playerMana = 20;
-        this.playerStamina = 50;
-        this.playerInventory = new ArrayList<>();
-        this.playerInventory.add("Sword");
-
-    }
-
-    public Player(int playerHealth, int playerMana, int playerStamina){
-        this.playerHealth = playerHealth;
-        this.playerMana = playerMana;
-        this.playerStamina = playerStamina;
-        this.playerInventory = new ArrayList<>();
-
-    }
-
-    public void setPlayerCords(int playerX, int playerY){
+    public Player(String name, CharacterClass characterClass){
+        super(name);
+        this.Lvl = 0;
+        this.XP = 0;
+        this.characterClass = characterClass;
+        applyClasseBaseStats();
         
 
     }
+
+    private void applyClasseBaseStats(){
+        this.HP = characterClass.getBaseHP();
+        this.MP = characterClass.getBaseMP();
+        this.SP = characterClass.getBaseSP();
+        this.Str = characterClass.getBaseStr();
+        this.Def = characterClass.getBaseDef();
+        this.intel = characterClass.getBaseIntel();
+        this.Ag = characterClass.getBaseAg();
+
+    }
+
+    @Override
+    public void toStringIFuckingGuess(){
+        System.out.println(name);
+        System.out.println(HP);
+        System.out.println(MP);
+        System.out.println(SP);
+        System.out.println(Str);
+        System.out.println(Def);
+        System.out.println(intel);
+        System.out.println(Ag);
+        System.out.println(gold);
+        System.out.println(Lvl);
+        System.out.println(XP);
+        System.out.println(characterClass.getClassName());
+        for(String x : equippedWeapons){
+            System.out.println(x);
+        }
+        for(String x : equippedArmor){
+            System.out.println(x);
+        }
+        for(String x : equipment){
+            System.out.println(x);
+        }
+    }
     
 
-    
-
-    
 }
