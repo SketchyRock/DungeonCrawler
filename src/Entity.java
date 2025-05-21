@@ -1,16 +1,14 @@
-
+//this class defines all entities (player, npc, enemies)
 
 public class Entity {
 
-    protected String name;
-    protected int HP,MP,SP,Str,Def,intel,Ag,gold;
-    protected int entityX, entityY;
-    protected String[] equippedWeapons,equippedArmor,equipment;
+    public String name;
+    public int HP,MP,SP,Str,Def,intel,Ag,gold,Dmg;
+    public String[] equippedWeapons,equippedArmor,equipment;
 
-    // temporarily putting movement stuff here but it will be appeneded to the end
-    // of the class later. need it here for ease of access
-
-
+    //base constructor, never to be actually used,
+    //all set vars in this should be set later to different values
+    //Other than like gold and stuff that should start at 0
     public Entity(String name){
         this.name = name;
         this.HP = 100;
@@ -21,15 +19,14 @@ public class Entity {
         this.intel = 0;
         this.Ag = 0;
         this.gold = 0;
-        this.entityX = 0;
-        this.entityY = 0;
         equippedWeapons = new String[2];
         equippedArmor = new String[5];
         equipment = new String[20];
 
     }
-
     
+    //prints all instance variables for the object
+    //only for testing, never to be used
     public void toStringIFuckingGuess(){
         System.out.println(name);
         System.out.println(HP);

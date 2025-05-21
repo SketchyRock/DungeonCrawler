@@ -1,3 +1,6 @@
+//based off of CharacterClass interface
+//Mage base character class
+
 public class Mage implements CharacterClass{
     
     

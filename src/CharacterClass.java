@@ -1,3 +1,6 @@
+//this interface I just learned out how to use
+//essentially is a template for classes like warrior, rouge, mage
+
 public interface CharacterClass {
 
     public String getClassName();

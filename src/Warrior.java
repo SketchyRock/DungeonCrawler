@@ -1,3 +1,6 @@
+//based off of CharacterClass interface
+//Warrior base character class
+
 public class Warrior implements CharacterClass{
     
     

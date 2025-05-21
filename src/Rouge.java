@@ -1,3 +1,6 @@
+//based off of CharacterClass interface
+//Rouge base character class
+
 public class Rouge implements CharacterClass{
     
     

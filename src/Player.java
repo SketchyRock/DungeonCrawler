@@ -3,6 +3,7 @@ public class Player extends Entity{
     protected int Lvl,XP;
     protected CharacterClass characterClass;
 
+    //players are entities with levels, xp and a class
     public Player(String name, CharacterClass characterClass){
         super(name);
         this.Lvl = 0;
@@ -13,6 +14,7 @@ public class Player extends Entity{
 
     }
 
+    //applies class base stats to character based on objects specified class
     private void applyClasseBaseStats(){
         this.HP = characterClass.getBaseHP();
         this.MP = characterClass.getBaseMP();
@@ -24,6 +26,8 @@ public class Player extends Entity{
 
     }
 
+    //just got annoyed but this is used to check if all variables are set properly
+    //prints all variables and equipped weapons and armor as well as equipment
     @Override
     public void toStringIFuckingGuess(){
         System.out.println(name);
